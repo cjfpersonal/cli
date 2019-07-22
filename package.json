@@ -1,0 +1,21 @@
+{
+  "name": "haizhi-cli",
+  "version": "1.0.0",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "build": "./bin/build.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "child_process": "^1.0.2",
+    "commander": "^2.20.0",
+    "ora": "^3.4.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
