@@ -1,9 +1,11 @@
+#!/usr/bin/env node
+
+
 const program = require("commander");
 // const download = require("download-git-repo");
 const chalk = require("chalk");
 const ora = require("ora");
 const { exec } = require('child_process');
-
 const { gitUrl } = require("./config.js");
 /**
  * 配置commander的使用方法
@@ -39,7 +41,6 @@ if (program.init) {
       spinner.fail('初始项目失败').stop()
       return;
     }
-    // console.log(chalk.blueBright("初始项目完成"))
     spinner.succeed('初始项目完成').stop()
   });
 }

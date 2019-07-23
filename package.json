@@ -8,7 +8,8 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "build": "./bin/build.js"
+    "haizhi-cli": "bin/build.js",
+    "hello": "index.js"
   },
   "dependencies": {
     "chalk": "^2.4.2",
@@ -17,5 +18,13 @@
     "ora": "^3.4.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "启动 node bin/build.js init <name>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjfpersonal/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cjfpersonal/cli/issues"
+  },
+  "homepage": "https://github.com/cjfpersonal/cli#readme"
 }
