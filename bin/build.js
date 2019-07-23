@@ -12,7 +12,7 @@ const { gitUrl } = require("./config.js");
  */
 program
   .version("0.1.0")
-  .option("-i, init [name]", "初始化name项目")
+  // .option("-i, init [name]", "初始化name项目")
   .parse(process.argv);
 
 /**
@@ -26,13 +26,14 @@ program.on("--help", () => {
   console.log();
 });
 
-if (program.init) {
-  if (!gitUrl[program.init]) {
-    // console.error(chalk.redBright("error: 暂不支持此项目"));
-    console.info("当前仅支持: -i, init " + chalk.blueBright("[gap、gp、sys]"));
-    return;
-  }
-  let cloneOption = 'git clone ' +  gitUrl[program.init]
+if (program.args) {
+  console.log(program.args[0])
+  // if (!gitUrl[program.init]) {
+  //   // console.error(chalk.redBright("error: 暂不支持此项目"));
+  //   console.info("当前仅支持: -i, init " + chalk.blueBright("[gap、gp、sys]"));
+  //   return;
+  // }
+  let cloneOption = 'git clone http://chenjianfeng:chenjianfeng@git.sz.haizhi.com/product/gp/gp-data.git ' + program.args[0]
   const spinner = ora('正在初始项目中').start();
   console.log();
   exec(cloneOption, (error, stdout, stderr) => {
@@ -48,6 +49,6 @@ if (program.init) {
 // 帮助
 function help() {
   program.parse(process.argv);
-  if (!program.init) return program.help(); //如果没有输入参数，终端显示帮助
+  return !program.args.length && program.help(); //如果没有输入参数，终端显示帮助
 }
 help();
