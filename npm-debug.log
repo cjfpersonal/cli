@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/lib/node_modules/cnpm/node_modules/.bin/npm',
+1 verbose cli   '--userconfig=/Users/haizhi/.cnpmrc',
+1 verbose cli   '--disturl=https://npm.taobao.org/mirrors/node',
+1 verbose cli   '--registry=https://registry.npm.taobao.org',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v10.13.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/haizhi/learn/summarize/back/node/haizhi-cli',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/haizhi/.npm/haizhi-cli/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/haizhi/.npm correctMkdir not in flight; initializing
+10 info lifecycle haizhi-cli@1.0.0~prepublish: haizhi-cli@1.0.0
+11 silly lifecycle haizhi-cli@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/haizhi/.npm/haizhi-cli/1.0.0/package.tgz',
+12 verbose tar pack   '/Users/haizhi/learn/summarize/back/node/haizhi-cli' ]
+13 verbose tarball /Users/haizhi/.npm/haizhi-cli/1.0.0/package.tgz
+14 verbose folder /Users/haizhi/learn/summarize/back/node/haizhi-cli
+15 verbose addLocalTarball adding from inside cache /Users/haizhi/.npm/haizhi-cli/1.0.0/package.tgz
+16 verbose correctMkdir /Users/haizhi/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd haizhi-cli@1.0.0
+18 verbose afterAdd /Users/haizhi/.npm/haizhi-cli/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/haizhi/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/haizhi/.npm/haizhi-cli/1.0.0/package/package.json written
+21 silly publish { name: 'haizhi-cli',
+21 silly publish   version: '1.0.0',
+21 silly publish   main: 'build.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   author: '',
+21 silly publish   license: 'ISC',
+21 silly publish   bin: { 'haizhi-cli': 'bin/build.js', hello: 'index.js' },
+21 silly publish   dependencies:
+21 silly publish    { chalk: '^2.4.2',
+21 silly publish      child_process: '^1.0.2',
+21 silly publish      commander: '^2.20.0',
+21 silly publish      ora: '^3.4.0' },
+21 silly publish   devDependencies: {},
+21 silly publish   description: '启动 node bin/build.js init <name>',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/cjfpersonal/cli.git' },
+21 silly publish   bugs: { url: 'https://github.com/cjfpersonal/cli/issues' },
+21 silly publish   homepage: 'https://github.com/cjfpersonal/cli#readme',
+21 silly publish   readme:
+21 silly publish    '\nUsage: haizhi-cli [options]\n\nOptions:\n  -V, --version    output the version number\n  -i, init [name]  初始化name项目\n  -h, --help       output usage information\n\nExamples:\n  # create a new project with an official template\n  $ node <haizhi-cli路径> init <my-project>\n\n\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '6d5029767239865b532032cc4d91965d07c0a996',
+21 silly publish   _id: 'haizhi-cli@1.0.0',
+21 silly publish   _shasum: 'a54ad0a58f3e2643ff866423757d0e7045e5114e',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name haizhi-cli
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npm.taobao.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'haizhi-cli',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'haizhi-cli',
+26 silly mapToRegistry   name: 'haizhi-cli',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npm.taobao.org/haizhi-cli
+28 verbose publish registryBase https://registry.npm.taobao.org/
+29 silly publish uploading /Users/haizhi/.npm/haizhi-cli/1.0.0/package.tgz
+30 verbose stack Error: auth required for publishing
+30 verbose stack     at CachingRegistryClient.publish (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+30 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/lib/publish.js:138:14
+30 verbose stack     at mapToRegistry (/usr/local/lib/node_modules/cnpm/node_modules/npm/lib/utils/map-to-registry.js:62:3)
+30 verbose stack     at publish_ (/usr/local/lib/node_modules/cnpm/node_modules/npm/lib/publish.js:107:3)
+30 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+30 verbose stack     at LOOP (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+30 verbose stack     at LOOP (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+30 verbose stack     at chain (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+30 verbose stack     at /usr/local/lib/node_modules/cnpm/node_modules/npm/lib/publish.js:73:5
+30 verbose stack     at RES (/usr/local/lib/node_modules/cnpm/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+31 verbose cwd /Users/haizhi/learn/summarize/back/node/haizhi-cli
+32 error Darwin 17.7.0
+33 error argv "/usr/local/bin/node" "/usr/local/lib/node_modules/cnpm/node_modules/.bin/npm" "--userconfig=/Users/haizhi/.cnpmrc" "--disturl=https://npm.taobao.org/mirrors/node" "--registry=https://registry.npm.taobao.org" "publish"
+34 error node v10.13.0
+35 error npm  v3.10.10
+36 error code ENEEDAUTH
+37 error need auth auth required for publishing
+38 error need auth You need to authorize this machine using `npm adduser`
+39 verbose exit [ 1, true ]
