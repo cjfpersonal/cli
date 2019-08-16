@@ -22,7 +22,7 @@ program.on("--help", () => {
   console.log();
   console.log("Examples:");
   console.log(chalk.gray("  # create a new project with an official template"));
-  console.log("  $ haizhi-cli init <my-project>");
+  console.log("  $ haizhi-cli <my-project>");
   console.log();
 });
 
