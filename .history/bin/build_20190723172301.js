@@ -35,6 +35,7 @@ if (program.args) {
   // }
   let cloneOption = 'git clone http://chenjianfeng:chenjianfeng@git.sz.haizhi.com/product/gp/gp-data.git ' + program.args[0]
   const spinner = ora('正在初始项目中').start();
+  console.log();
   exec(cloneOption, (error, stdout, stderr) => {
     if (error) {
       console.error(chalk.redBright("error: " + error));
